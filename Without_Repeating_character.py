@@ -7,6 +7,6 @@ def without_repeating_character(str):
             string+=i
     return string 
 
-str="helper"
+str="programming"
 result=without_repeating_character(str)
 print("result",result)
