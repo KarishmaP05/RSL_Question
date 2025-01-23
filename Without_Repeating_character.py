@@ -1,15 +1,15 @@
-# def without_repeating_character(str):
+def without_repeating_character(str):
     
-#     string=""
+    string=""
 
-#     for i in str:
-#         if i not in string:
-#             string+=i
-#     return string 
+    for i in str:
+        if i not in string:
+            string+=i
+    return string 
 
-# str="programming"
-# result=without_repeating_character(str)
-# print("result",result)
+str="programming"
+result=without_repeating_character(str)
+print("result",result)
 
 def remove_duplicates(str):
     string=""
@@ -23,3 +23,5 @@ def remove_duplicates(str):
 str="helper"
 result=remove_duplicates(str)
 print(result)
+
+

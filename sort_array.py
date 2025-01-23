@@ -15,3 +15,4 @@ arr=[4,5,6,3,1,2]  # sort acending
 
 result=sort(arr)
 print("arr",arr)
+
