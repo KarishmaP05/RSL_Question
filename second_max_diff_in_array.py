@@ -67,3 +67,59 @@ print(second_max_difference([-15,-10, 0,5,20]))  # Output: 30
 print(second_max_difference([2,6]))                # Output: "Not enough unique elements to calculate a second difference."
 print(second_max_difference([4, 4, 4]))             # Output: "Not enough unique elements to calculate a second difference."
 print(second_max_difference([]))                    # Output: "Not enough elements to calculate differences."
+
+
+
+
+
+def sort(arr):
+    
+    n=len(arr)
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if arr[j]<arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+
+    return arr
+
+def removeduplicate(sorted_array):
+    arr=[]
+
+    for i in range(len(sorted_array)):
+        if sorted_array[i] in arr:
+            continue
+        else:
+            arr.append(sorted_array[i])
+
+    return arr
+
+def second_max_difference(arr):
+    if len(arr)<2:
+        return False
+    sorted_array=sort(arr)
+    remove_duplicate=removeduplicate(sorted_array)
+    # second_max_diff
+
+    max_val=remove_duplicate[0]
+    min_val=remove_duplicate[-1]
+
+    second_max_val=remove_duplicate[1]
+    second_min_val=remove_duplicate[-2]
+
+    largest_diff=max_val-min_val
+    second_max_diff1=second_max_val-min_val
+    second_max_diff2=max_val-second_min_val
+
+    unique_diffs = sort([largest_diff,second_max_diff1,second_max_diff2])
+
+    unique_differences=removeduplicate(unique_diffs)
+
+    if len(unique_differences)>2:
+
+        return unique_differences[1]
+    else:
+        return False
+
+arr=[6,2,9,4,2,4,1]
+second_max=second_max_difference(arr)
+print(second_max)

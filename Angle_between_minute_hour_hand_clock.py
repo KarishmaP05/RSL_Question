@@ -58,7 +58,8 @@ def smaller_angle(hour,minute):
 
 
 
-hour=6
-minute=00
+hour=3
+minute=30
 result=smaller_angle(hour,minute)
 print(result)
+

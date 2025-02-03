@@ -16,3 +16,10 @@ def smallest_number(array):
     return current_min
 array=[15,4,56,34,21,3,23,45]
 print(smallest_number(array))
+
+
+
+print("Hello Worlds")
+for i in range(n):
+    if i == 2:
+        print("I in as even nnm")

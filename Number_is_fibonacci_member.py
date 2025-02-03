@@ -13,8 +13,13 @@ def is_fibonacci(N):
     condition1=5*N*N+4
     condition2=5*N*N-4
 
-    return is_perfect(condition1) or is_perfect(condition2)
+    # return is_perfect(condition1) or is_perfect(condition2)
 
-N=16
+    if is_perfect(condition1) or is_perfect(condition2):
+        return f"fibonacci series"
+    else:
+        return f"not fs"
+
+N=13
 result=is_fibonacci(N)
 print(result)
