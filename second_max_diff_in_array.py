@@ -115,7 +115,6 @@ def second_max_difference(arr):
     unique_differences=removeduplicate(unique_diffs)
 
     if len(unique_differences)>2:
-
         return unique_differences[1]
     else:
         return False

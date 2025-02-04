@@ -1,7 +1,6 @@
 def is_perfect(x):
     if x<0:
         return False
-    
     i=0
     while i*i<=x:
         if i*i==x:

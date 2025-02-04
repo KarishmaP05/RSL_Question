@@ -236,15 +236,78 @@
 
 
 # Function to print full pyramid pattern
-def full_pyramid(n):
-    for i in range(1, n + 1):
-        # Print leading spaces
-        for j in range(n - i):
-            print("", end="")
+# def full_pyramid(n):
+#     for i in range(1, n + 1):
+#         # Print leading spaces
+#         for j in range(n - i):
+#             print("", end="")
         
-        # Print asterisks for the current row
-        for k in range(1, i+1):
-            print(i, end="")
-        print()
+#         # Print asterisks for the current row
+#         for k in range(1, i+1):
+#             print(i, end="")
+#         print()
    
-full_pyramid(5)
+# full_pyramid(5)
+
+
+
+
+
+
+#coin change
+def sort(coins):
+    n=len(coins)
+    for i in range(n):
+        for j in range(n-i-1):
+            if coins[j]<coins[j+1]:
+                coins[j],coins[j+1]=coins[j+1],coins[j]
+    return coins
+
+
+
+
+# def coin_change(coins,value):
+#     coin_count={}
+#     # sort coins in descending
+#     sortedcoins=sort(coins)
+#     print("sortedcoins",sortedcoins)
+#     for coin in sortedcoins:
+#         if value>=coin:
+#             count=value//coin
+#             coin_count[coin]=count
+#             value=value-(coin*count)
+#     print("coin_count",coin_count)
+#     return coin_count
+
+
+
+# coins=[2,1,5]
+# value=23
+# coin_change(coins,value)
+
+def index(arr):
+    sorted_array=[]
+
+    for i in range(len(arr)):
+        sorted_array.append((arr[i],i))
+
+    n=len(sorted_array)
+
+    for i in range(n):
+        for j in range(n-i-1):
+            if sorted_array[j][0]<sorted_array[j+1][0]:
+                sorted_array[j],sorted_array[j+1]=sorted_array[j+1],sorted_array[j]
+
+    print(sorted_array)
+
+    sorted_indices=[]
+
+    for i in range(n):
+        sorted_indices.append(sorted_array[i][1])
+    return sorted_indices
+
+
+arr=[5,6,8,4,3]  # sort= 8,6,5,4,3  => 2,1,0,3,4
+
+
+print(index(arr))

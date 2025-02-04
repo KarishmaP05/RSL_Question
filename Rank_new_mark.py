@@ -10,14 +10,14 @@ def sortmarklist(mark_list):
 def rank_new_mark(mark_list,new_mark):
     #sort the mark list first
     sorted_mark_list=sortmarklist(mark_list)
-    rank=0
+    rank=1
     for mark in sorted_mark_list:
         if new_mark < mark:
             rank+=1
         elif new_mark==mark:
             break
     return rank
-new_mark=36
+new_mark=40
 mark_list=[28,38,36,38,34,31,39]
 result=rank_new_mark(mark_list,new_mark)
 print(result)

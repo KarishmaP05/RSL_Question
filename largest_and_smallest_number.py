@@ -5,7 +5,7 @@ def largest_number(array):
         if array[i]>current_max:
             current_max=array[i]
     return current_max
-array=[15,4,56,34,21,3,23,45]
+array=[51,50,49,48]
 print(largest_number(array))
 
 def smallest_number(array):
@@ -14,12 +14,6 @@ def smallest_number(array):
         if array[i]<current_min:
             current_min=array[i]
     return current_min
-array=[15,4,56,34,21,3,23,45]
+array=[51,50,49,48]
 print(smallest_number(array))
 
-
-
-print("Hello Worlds")
-for i in range(n):
-    if i == 2:
-        print("I in as even nnm")
