@@ -4,7 +4,8 @@
 #     for i in arr:
 #         if i in new_array:
 #             continue
-#         else:
+#         else
+# :
 #             new_array.append(i)
             
             
