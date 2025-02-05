@@ -25,3 +25,9 @@ def max_chocolate(Number):
 
 Number=20
 print(max_chocolate(Number))
+
+
+
+
+
+

@@ -17,7 +17,7 @@ def rank_new_mark(mark_list,new_mark):
         elif new_mark==mark:
             break
     return rank
-new_mark=40
-mark_list=[28,38,36,38,34,31,39]
+new_mark=38
+mark_list=[28,34,31,39] 
 result=rank_new_mark(mark_list,new_mark)
 print(result)

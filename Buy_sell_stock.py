@@ -4,20 +4,22 @@
 #     transaction=[]
 #     max_profit=0
     
-#     for i in range(1,n):
-#       if prices[i]>prices[i-1]:
-#           buy_day=i-1
-#           sell_day=i
-#           profit=prices[sell_day]-prices[buy_day]
+#     for i in range(1,n): #1,2,3,4,5,6
+#       print(i)
+#       if prices[i]>prices[i-1]: # 180>100, 260>180, 310-260, 40>310, 535>40 , 695>535
+#           buy_day=i-1 #0=100  180  310  535  695>535
+#           sell_day=i #1= 180  260  260   40
+#           profit=prices[sell_day]-prices[buy_day]   # 80+80+50+495+ 160
 #           transaction.append((buy_day,sell_day,profit))
-#           max_profit+=profit
+
+#           max_profit+=profit  # 210+495+160
+
+#     # print(max_profit)
 #     return max_profit,transaction
     
-
 # prices=[100, 180, 260, 310, 40, 535, 695]
 
 # max_profit,transaction=maxprofit(prices)
-
 
 # def print_transactions(prices,transaction):
 #     for buy,sell,profit in transaction:
@@ -29,6 +31,9 @@
 # print(f"max_profit is {max_profit}")
 
 
+print("second!!!!!!!!!!!11")
+
+
 
 
 def maxprofit(prices):
@@ -37,26 +42,20 @@ def maxprofit(prices):
     max_profit=0
     i=0
     while i<n-1: # 0, 7
-        
-        while i<n and prices[i]>prices[i+1]:  # buy stock
+        while i<n and prices[i]>prices[i+1]:  # buy stock  1000>180 , 180>100, 100>260
             i+=1
         if i==n-1:
             break
-        buy=i
-        i+=1
-        
+        buy=i  #2(100)
+        i+=1 # 3
+
         while i <n and prices[i]>prices[i-1]: # sell stock
             i+=1
         sell = i-1
-    
- 
         profit=prices[sell]-prices[buy]
-        transaction.append((buy,sell,profit))
         max_profit+=profit
     return max_profit,transaction
-    
-
-prices=[100, 180, 260, 310, 40, 535, 695]
+prices=[1000, 180, 100,260, 310, 40, 535, 695]
 
 max_profit,transaction=maxprofit(prices)
 

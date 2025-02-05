@@ -21,6 +21,7 @@ def check_order(num):
     else:
         return "no proper sequence"
     
-num=1111
+num=5434565421
 result=check_order(num)
 print(result)
+

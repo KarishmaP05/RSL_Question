@@ -119,6 +119,6 @@ def second_max_difference(arr):
     else:
         return False
 
-arr=[6,2,9,4,2,4,1]
+arr=[6,2,9]
 second_max=second_max_difference(arr)
 print(second_max)
